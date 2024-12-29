@@ -1,0 +1,10 @@
+@charset "UTF-8";
+*item{
+transition: .35S;
+cursor: pointer;
+}
+*container:hover>:not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+
+}
