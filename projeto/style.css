@@ -10,6 +10,7 @@
     box-shadow: inset 0 0 32px 0 #f1b,0 0 32px;
     box-shadow: 0 0 8px hsl(0 0% 100% / 0.3),0 0 32px;
     position: relative;
+   
 }
 .neon::after{
     content: "";
@@ -21,18 +22,27 @@
     opacity: 0;
     background-color: #f1b;
     z-index: -1;
-    transition: 100ms linear;
+    transition:opacity 100ms linear; 
+    
+}
+.neon:hover::before{
+    
     transform: perspective(64px)rotateX(40deg)scale(1,0.35);
     filter: blur(64px);
     opacity:0,7 ;
     pointer-events: none;
+    width: 100%;
+    height: 100%;
+    
 
-}
-.neon:hover::before
+    }
+  
+
+
 .neon:hover::after{
     opacity: 1;
 }
 .neon:hover{
-    color: #f1b;
+    color:#31202b;
     text-shadow: none;
 }
