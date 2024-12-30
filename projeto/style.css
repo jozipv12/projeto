@@ -8,19 +8,20 @@
     border:#f1b 8px solid;
     border-radius: 16px;
     box-shadow: inset 0 0 32px 0 #f1b,0 0 32px;
+    box-shadow: 0 0 8px hsl(0 0% 100% / 0.3),0 0 32px;
     position: relative;
 }
 .neon::after{
     content: "";
     position: absolute;
-    top: 120px;
+    top: 120%;
     left: 0;
     right: 0;
     box-shadow: 0 0 128px 32px #f1b;
     opacity: 0;
     background-color: #f1b;
     z-index: -1;
-    transition: opacity 100ms linear;
+    transition: 100ms linear;
 
 }
 .neon:hover::before
