@@ -1,10 +1,33 @@
-@charset "UTF-8";
-*item{
-transition: .35S;
-cursor: pointer;
+.neon{
+    font-size: 64px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    color:#f1b;
+    padding: 16px 64px;
+    border:#f1b 8px solid;
+    border-radius: 16px;
+    box-shadow: inset 0 0 32px 0 #f1b,0 0 32px;
+    position: relative;
 }
-*container:hover>:not(:hover){
-    opacity: .4;
-    transform: scale(0.9);
+.neon::after{
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 128px 32px #f1b;
+    opacity: 0;
+    background-color: #f1b;
+    z-index: -1;
+    transition: opacity 100ms linear;
 
+}
+.neon:hover::before
+.neon:hover::after{
+    opacity: 1;
+}
+.neon:hover{
+    color: #f1b;
+    text-shadow: none;
 }
